@@ -56,12 +56,12 @@ class Order:
                 return "Product not found"
 
 p1 = Product.add_product("Laptop", "Electronics", 50, 1000, "Supplier A")
-Product.add_product("T-Shirt", "Clothing", 100, 25, "Supplier B")
-p2 = Product.update_product(1, quantity=45, price=950)
-p3 = Product.delete_product(1)
-p4 = order1 = Order(order_id=1, product_id=1, quantity=2, customer_info="John Doe")
-
 print(p1)
-print(p2)
-print(p3)
+p4 = Product.add_product("T-Shirt", "Clothing", 100, 25, "Supplier B")
 print(p4)
+p2 = Product.update_product(1, quantity=45, price=950)
+print(p2)
+p3 = Product.delete_product(1)
+print(p3)
+order1 = Order(order_id=1, product_id=1, quantity=2, customer_info="John Doe")
+print(order1.place_order())
